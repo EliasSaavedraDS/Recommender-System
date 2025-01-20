@@ -2,13 +2,14 @@ import requests
 from bs4 import BeautifulSoup as bs
 import time
 from requests.exceptions import HTTPError
-
+import csv
 
 HEADERS = {
     "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
 }
 
 seen_urls = set()
+unique_field_names = set()
 
 def get_car_url(page_number):
     search_url = f"https://dallas.craigslist.org/search/cta?purveyor=owner#search=1~gallery~{page_number}~0"
@@ -25,8 +26,8 @@ def get_car_url(page_number):
             for car in car_posts[:3]:
                 url = car.find('a', href=True)
                 if url and url.get('href'):
-                    car_urls.append(url.get('href'))
-                    seen_urls.add(url.get('href'))      
+                    car_urls.append(url.get('href'))    
+            break
         except HTTPError as e:
             if e.response.status_code == 412:
                 print(f"Precondition Failed (412): {e}. Skipping URL.")
@@ -63,6 +64,10 @@ def get_car_details(url):
                 if i + 1 < len(spans):
                     value = spans[i + 1].text.strip()
                     attributes[key] = value
+            for key in attributes.keys():
+                unique_field_names.add(key)
+            for key in attributes:
+                attributes[key] = clean_data(attributes[key])
         except HTTPError as e:
             if e.response.status_code == 412:
                 print(f"Precondition Failed (412): {e}. Skipping URL.")
@@ -75,6 +80,20 @@ def get_car_details(url):
             break
     return attributes
         
+def export_to_csv(all_details):
+    field_names = list(unique_field_names)
+    with open("CrailistDataset.csv", 'w', newline='', encoding='utf-8') as f:
+        writer = csv.DictWriter(f, fieldnames=field_names)
+        writer.writeheader()
+        writer.writerows(all_details)
+    print('Saved to csv')
+
+def clean_data(value):
+    rm_chars = ["$",',']
+    for char in rm_chars:
+        if char in value:
+            value = value.replace(char, "")
+    return value
 
 def main():
     # base_url = "https://dallas.craigslist.org/search/cta?purveyor=owner#search=1~gallery~0~0"
@@ -83,19 +102,25 @@ def main():
     #     car_urls = get_car_url(page_number)
     #     all_car_urls.extend(car_urls)
 
-    # for url in car_urls:
-    #     details = get_car_details(url)
-    #     print(details)
+        # for url in car_urls:
+        #     details = get_car_details(url)
+        #     print(details)
 
     car_urls = get_car_url(0)
+    all_details = []
     if car_urls:
         for url in car_urls:
-            print(f"Scraping details for: {url}")
-            details = get_car_details(url)
-            print("Car Details:")
-            for key, value in details.items():
-                print(f"{key} {value}")
-            print("-" * 40)  # Optional separator between car details
+            if url not in seen_urls:
+                print(f"Scraping details for: {url}")
+                details = get_car_details(url)
+                all_details.append(details)
+                print("Car Details:")
+                time.sleep(0.5)
+                for key, value in details.items():
+                    print(f"{key} {value}")
+                print("-" * 40)  # Optional separator between car details
+                seen_urls.add(url)  
+    ### export_to_csv(all_details)
     else:
         print("No car URLs found. Check your scraping logic or the structure of the website.")
 if __name__ == "__main__":
