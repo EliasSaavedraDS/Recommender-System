@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup as bs
 import time
 from requests.exceptions import HTTPError
 import csv
+import random
 
 HEADERS = {
     "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
@@ -23,7 +24,7 @@ def get_car_url(page_number):
             soup = bs(r.content, 'html.parser')
             car_listing = soup.find('ol', class_='cl-static-search-results')
             car_posts = car_listing.find_all('li', class_='cl-static-search-result')
-            for car in car_posts[:3]:
+            for car in car_posts: # test: obtain only 3 car postings with-> for car in car_posts[:3]
                 url = car.find('a', href=True)
                 if url and url.get('href'):
                     car_urls.append(url.get('href'))    
@@ -68,6 +69,8 @@ def get_car_details(url):
                 unique_field_names.add(key)
             for key in attributes:
                 attributes[key] = clean_data(attributes[key])
+            for key in unique_field_names:
+                attributes[key] = attributes.get(key, None)
         except HTTPError as e:
             if e.response.status_code == 412:
                 print(f"Precondition Failed (412): {e}. Skipping URL.")
@@ -97,31 +100,44 @@ def clean_data(value):
 
 def main():
     # base_url = "https://dallas.craigslist.org/search/cta?purveyor=owner#search=1~gallery~0~0"
-    # all_car_urls = []
-    # for page_number in range(0,18):
-    #     car_urls = get_car_url(page_number)
-    #     all_car_urls.extend(car_urls)
-
-        # for url in car_urls:
-        #     details = get_car_details(url)
-        #     print(details)
-
-    car_urls = get_car_url(0)
+    
+    #block used to export all car details of all car posts for each page 0-17
+    all_car_urls = []
     all_details = []
-    if car_urls:
-        for url in car_urls:
-            if url not in seen_urls:
-                print(f"Scraping details for: {url}")
-                details = get_car_details(url)
-                all_details.append(details)
-                print("Car Details:")
-                time.sleep(0.5)
-                for key, value in details.items():
-                    print(f"{key} {value}")
-                print("-" * 40)  # Optional separator between car details
-                seen_urls.add(url)  
-    ### export_to_csv(all_details)
-    else:
-        print("No car URLs found. Check your scraping logic or the structure of the website.")
+    for page_number in range(0,2):
+        car_urls = get_car_url(page_number)
+        all_car_urls.extend(car_urls)
+        if car_urls:
+            for url in car_urls:
+                if url not in seen_urls:
+                    details = get_car_details(url)
+                    if details:  # Ensure we don't append empty data
+                        all_details.append(details)
+                    else:
+                        print(f"Skipping empty details for {url}")
+                    #all_details.append(details)
+                    seen_urls.add(url) 
+                    time.sleep(random.uniform(0.5, 2.0)) 
+        else:
+            print("No car URLs found. Check your scraping logic or the structure of the website.")
+    export_to_csv(all_details)
+    
+    #Block of code to use to test and print the car details for only the first page. used to see if it is scraping properly
+    # car_urls = get_car_url(0)
+    # all_details = []
+    # if car_urls:
+    #     for url in car_urls:
+    #         if url not in seen_urls:
+    #             print(f"Scraping details for: {url}")
+    #             details = get_car_details(url)
+    #             all_details.append(details)
+    #             print("Car Details:")
+    #             time.sleep(0.5)
+    #             for key, value in details.items():
+    #                 print(f"{key} {value}")
+    #             print("-" * 40)  # Optional separator between car details
+    #             seen_urls.add(url)  
+    # else:
+    #     print("No car URLs found. Check your scraping logic or the structure of the website.")
 if __name__ == "__main__":
     main()
