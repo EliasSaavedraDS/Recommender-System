@@ -4,6 +4,7 @@ import time
 from requests.exceptions import HTTPError
 import csv
 import random
+import re
 
 HEADERS = {
     "User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
@@ -54,10 +55,26 @@ def get_car_details(url):
             year = soup.find('span', class_='valu year').text
             model = soup.find('span', class_='valu makemodel').text
             price = soup.find('span', class_="price").text
+            post_id = url.split("/")[-1].replace(".html", "")
+            description_section = soup.find('section', id= 'postingbody')
+            if description_section:
+                unwanted_div = description_section.find('div')
+                unwanted_a = description_section.find('a')
+                if unwanted_div:
+                    unwanted_div.decompose()
+                if unwanted_a:
+                    unwanted_a.decompose()
+                description = description_section.text.strip()
+                description = re.sub(r'\s+', ' ', description)
+            else:
+                description = "[No Description Provided]"
+            
             attributes = {
                 "Year":year, 
                 "Model":model, 
-                "Price":price
+                "Price":price,
+                "Description":description,
+                "Post ID":post_id
                 }
             spans = attr_groups[1].find_all('span')
             for i in range(0, len(spans), 2):
@@ -65,12 +82,17 @@ def get_car_details(url):
                 if i + 1 < len(spans):
                     value = spans[i + 1].text.strip()
                     attributes[key] = value
+
             for key in attributes.keys():
                 unique_field_names.add(key)
-            for key in attributes:
-                attributes[key] = clean_data(attributes[key])
+
             for key in unique_field_names:
                 attributes[key] = attributes.get(key, None)
+
+            for key in attributes:
+                if key != "Description":
+                    attributes[key] = clean_data(attributes[key])
+
         except HTTPError as e:
             if e.response.status_code == 412:
                 print(f"Precondition Failed (412): {e}. Skipping URL.")
@@ -104,7 +126,7 @@ def main():
     #block used to export all car details of all car posts for each page 0-17
     all_car_urls = []
     all_details = []
-    for page_number in range(0,2):
+    for page_number in range(0,18):
         car_urls = get_car_url(page_number)
         all_car_urls.extend(car_urls)
         if car_urls:
