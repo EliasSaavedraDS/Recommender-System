@@ -12,9 +12,10 @@ HEADERS = {
 
 seen_urls = set()
 unique_field_names = set()
+search_querry = ["dallas","austin","houston"]
 
-def get_car_url(page_number):
-    search_url = f"https://dallas.craigslist.org/search/cta?purveyor=owner#search=1~gallery~{page_number}~0"
+def get_car_url(location, page_number):
+    search_url = f"https://{location}.craigslist.org/search/cta?purveyor=owner#search=1~gallery~{page_number}~0"
     car_urls = []
     max_retries = 5
     backoff_factor = 3
@@ -25,7 +26,7 @@ def get_car_url(page_number):
             soup = bs(r.content, 'html.parser')
             car_listing = soup.find('ol', class_='cl-static-search-results')
             car_posts = car_listing.find_all('li', class_='cl-static-search-result')
-            for car in car_posts: # test: obtain only 3 car postings with-> for car in car_posts[:3]
+            for car in car_posts: # test: obtain only 3 car postings using "for car in car_posts[:3]"
                 url = car.find('a', href=True)
                 if url and url.get('href'):
                     car_urls.append(url.get('href'))    
@@ -123,25 +124,28 @@ def clean_data(value):
 def main():
     # base_url = "https://dallas.craigslist.org/search/cta?purveyor=owner#search=1~gallery~0~0"
     
-    #block used to export all car details of all car posts for each page 0-17
+    #block of code used to export all car details of all car posts for existing page
     all_car_urls = []
     all_details = []
-    for page_number in range(0,18):
-        car_urls = get_car_url(page_number)
-        all_car_urls.extend(car_urls)
-        if car_urls:
-            for url in car_urls:
-                if url not in seen_urls:
-                    details = get_car_details(url)
-                    if details:  # Ensure we don't append empty data
-                        all_details.append(details)
-                    else:
-                        print(f"Skipping empty details for {url}")
-                    #all_details.append(details)
-                    seen_urls.add(url) 
-                    time.sleep(random.uniform(0.5, 2.0)) 
-        else:
-            print("No car URLs found. Check your scraping logic or the structure of the website.")
+    for location in search_querry:
+        page_number = 0
+        while True:
+            car_urls = get_car_url(location, page_number)
+            all_car_urls.extend(car_urls)
+            if car_urls:
+                for url in car_urls:
+                    if url not in seen_urls:
+                        details = get_car_details(url)
+                        if details:
+                            all_details.append(details)
+                        else:
+                            print(f"Skipping empty details for {url}")
+                        seen_urls.add(url) 
+                        time.sleep(random.uniform(1, 3.0)) 
+                page_number+=1
+            else:
+                print("No car URLs found. Check your scraping logic or the structure of the website.")
+                break
     export_to_csv(all_details)
     
     #Block of code to use to test and print the car details for only the first page. used to see if it is scraping properly
