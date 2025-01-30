@@ -1,0 +1,709 @@
+type:,Year,transmission:,odometer:,Model,VIN:,fuel:,drive:,Price,title status:,cylinders:,paint color:,condition:
+minivan,2011,automatic,80000," honda odyssey touring elite
+",,gas,rwd,11500,clean,6 cylinders,white,excellent
+,1997,other,95000," mercury villager van
+",,gas,,2800,clean,,,good
+truck,2007,automatic,180000," chevrolet silverado
+",,gas,rwd,10950,clean,8 cylinders,,excellent
+,2014,automatic,150000," toyota camry
+",,gas,,9500,clean,,,good
+sedan,2011,automatic,128532," lincoln mks
+",MKS3542766988MRDW,gas,4wd,4500,clean,6 cylinders,brown,excellent
+convertible,2007,manual,110012," mazda miata
+",JM1NC25F270125291,gas,rwd,12000,clean,4 cylinders,red,excellent
+sedan,2016,automatic,149516," chevrolet malibu lt
+",,gas,,4950,clean,4 cylinders,,excellent
+sedan,2013,automatic,150000," madza 3
+",,gas,,4500,clean,4 cylinders,,excellent
+truck,1994,automatic,250," ford ranger
+",,gas,rwd,5000,clean,8 cylinders,custom,good
+pickup,1966,manual,33168," chevy el camino
+",,gas,rwd,13500,clean,8 cylinders,silver,good
+pickup,2016,automatic,89999," Ford F-150 Sport
+",,gas,rwd,15000,clean,8 cylinders,black,excellent
+convertible,1966,automatic,100000," ford mustang convertible
+",,gas,,3800,clean,,,
+pickup,1985,automatic,125," chevy silverado
+",,gas,rwd,35000,clean,8 cylinders,blue,excellent
+SUV,2011,automatic,160000," Buick Enclave CXL
+",,gas,fwd,4000,clean,6 cylinders,white,fair
+sedan,2013,automatic,99793," mercedes benz c300 4matic
+",,gas,4wd,8600,clean,,,like new
+wagon,1988,automatic,88000," oldsmobile custom cruiser wagon
+",,gas,rwd,22000,clean,8 cylinders,blue,excellent
+pickup,2008,automatic,300000," toyota tundra
+",,gas,4wd,7500,clean,8 cylinders,grey,excellent
+sedan,2013,automatic,34010," Ford Fusion SE
+",3FA6P0HR2DR206506,gas,fwd,8000,clean,4 cylinders,silver,excellent
+,2013,automatic,116000," bmw 528i
+",,gas,4wd,9800,clean,6 cylinders,white,like new
+coupe,2022,automatic,26231," ford mustang gt premium
+",,gas,rwd,41300,clean,8 cylinders,white,like new
+minivan,2015,automatic,141621," Toyota Sienna
+",,gas,,27000,clean,,white,
+truck,2018,automatic,148000," ford f-150
+",,gas,4wd,12500,clean,8 cylinders,grey,
+SUV,2006,automatic,317000," toyota sequoia limited
+",,gas,,6995,clean,8 cylinders,,excellent
+sedan,2008,automatic,200000," Lexus es350
+",,gas,,2600,clean,,,
+sedan,2015,automatic,98000," nissan sentra
+",,gas,fwd,9999,clean,4 cylinders,black,excellent
+sedan,2016,automatic,163000," Dodge Dart SE
+",,gas,fwd,4550,clean,4 cylinders,silver,good
+sedan,2020,automatic,62726," Hyundai Sonata SEL Plus
+",,gas,fwd,18000,clean,4 cylinders,red,excellent
+SUV,2009,automatic,152890," jeep liberty sport
+",,gas,rwd,2900,clean,6 cylinders,grey,good
+sedan,2019,automatic,60561," Honda Civic LX
+",2HGFC2F68KH596838,gas,,10995,rebuilt,4 cylinders,,
+SUV,2017,automatic,62128," mitsubishi outlander sport
+",,gas,,8995,clean,4 cylinders,grey,excellent
+SUV,2016,automatic,153000," jeep wrangler
+",,gas,4wd,17000,clean,6 cylinders,white,good
+pickup,2002,manual,70000," Dodge Ram 2500
+",,diesel,4wd,15990,clean,6 cylinders,,
+sedan,2005,automatic,177500," Toyota Avalon XLS
+",,gas,fwd,4000,clean,6 cylinders,green,good
+coupe,2011,automatic,125390," audi a5 2.0t premium plus
+",,gas,4wd,6900,clean,4 cylinders,,excellent
+truck,2016,automatic,235000," ford f-250
+",,diesel,4wd,20000,clean,8 cylinders,silver,excellent
+,2014,automatic,118000," ford taurus
+",,gas,,6500,clean,,,
+SUV,2013,automatic,1," ford edge
+",,gas,fwd,4500,clean,6 cylinders,black,excellent
+sedan,2010,automatic,118000," dodge charger
+",,gas,,4500,clean,,,
+pickup,2006,manual,256000," dodge ram 2500 diesel
+",,diesel,rwd,10500,clean,6 cylinders,white,fair
+minivan,2012,automatic,111000," toyota sienna
+",,gas,fwd,12900,clean,6 cylinders,silver,like new
+SUV,2003,automatic,142000," Toyota Highlander STD
+",JTEGF21A030097149,gas,fwd,5000,clean,6 cylinders,black,excellent
+SUV,2008,automatic,254000," ford expedition
+",,gas,rwd,4800,clean,8 cylinders,silver,good
+pickup,2000,automatic,137000," Toyota Tacoma
+",,gas,rwd,16000,clean,6 cylinders,silver,
+,2009,automatic,144449," volkswagen rabbit
+",,gas,fwd,4500,clean,5 cylinders,,excellent
+sedan,2010,automatic,94200," toyota camry
+",,gas,,9000,clean,,grey,excellent
+sedan,2020,automatic,46685," Kia Rio
+",3KPA24AD1LE335402,gas,fwd,11000,clean,4 cylinders,black,excellent
+truck,2007,automatic,181000," dodge ram 2500
+",,diesel,4wd,22800,clean,6 cylinders,black,excellent
+sedan,2007,automatic,138000," infiniti g35 sedan
+",,gas,rwd,4500,clean,6 cylinders,grey,good
+pickup,2019,automatic,71550," Ram 1500 Classic DS
+",1C6RR6FG7KS524295,gas,rwd,16500,clean,6 cylinders,red,excellent
+SUV,2020,automatic,42023," Kia Soul
+",KNDJ23AU5L7038840,gas,fwd,13000,clean,4 cylinders,white,excellent
+sedan,2013,automatic,71088," Hyundai Elantra
+",KMHDH4AE0DU928686,gas,fwd,7300,clean,4 cylinders,silver,excellent
+pickup,2001,manual,43000," nissan frontier
+",,gas,,10000,clean,4 cylinders,,excellent
+truck,2016,automatic,198900," dodge ram 2500
+",,gas,4wd,15800,clean,8 cylinders,white,excellent
+sedan,2016,automatic,81964," Mazda Mazda6 Touring/GS
+",JM1GJ1V52G1470766,gas,fwd,12500,clean,4 cylinders,grey,excellent
+sedan,2015,automatic,51978," Toyota Avalon
+",4T1BK1EB1FU179004,gas,fwd,17500,clean,6 cylinders,grey,excellent
+,2015,automatic,147000," nissan versa Note
+",,gas,,4000,clean,,grey,excellent
+sedan,2012,automatic,208000," nissan sentra
+",,gas,,1800,clean,,,
+,2007,automatic,180000," toyota camry hybrid
+",,hybrid,,7000,clean,,,
+hatchback,2011,automatic,133457," Toyota Prius
+",JTDKN3DU9B1451885,hybrid,fwd,6900,clean,4 cylinders,white,good
+wagon,2014,automatic,98345," Volkswagen Jetta SportWagen
+",3VWPL7AJ3EM614841,diesel,fwd,7500,clean,4 cylinders,grey,good
+SUV,2003,automatic,168000," dodge durango
+",,gas,,3300,clean,6 cylinders,silver,excellent
+coupe,1996,other,96234," chevrolet corvette coupe
+",1G1YY22P2T5101042,gas,rwd,8500,clean,8 cylinders,purple,good
+SUV,2000,automatic,216234," Ford Expedition XLT
+",1FMRU156XYLA94392,gas,rwd,2000,clean,8 cylinders,red,good
+SUV,2009,automatic,203400," toyota rav4
+",,gas,fwd,4200,clean,4 cylinders,silver,good
+sedan,2007,automatic,172000," volkswagen jetta wolfsburg
+",,gas,fwd,3200,clean,4 cylinders,grey,good
+hatchback,2012,automatic,183000," scion xb
+",,gas,rwd,5800,clean,4 cylinders,blue,good
+hatchback,2013,automatic,122000," kia soul
+",,gas,fwd,5400,clean,4 cylinders,green,excellent
+sedan,2012,automatic,205000," Toyota Camry
+",,gas,fwd,5900,clean,4 cylinders,silver,excellent
+truck,2007,automatic,90000," Audi Q7
+",,gas,,6000,clean,,white,fair
+SUV,2006,automatic,180785," jeep liberty
+",,gas,,2500,clean,6 cylinders,red,fair
+SUV,2010,automatic,139411," toyota highlander limited
+",,gas,fwd,8500,clean,6 cylinders,white,excellent
+sedan,2009,automatic,202457," toyota corolla le
+",JTDBL40E09J032263,gas,fwd,4250,clean,4 cylinders,black,good
+SUV,2016,automatic,146000," honda cr-v
+",,gas,fwd,17000,clean,4 cylinders,white,good
+sedan,2015,automatic,138000," nissan altima
+",,gas,,6000,clean,4 cylinders,custom,good
+truck,2021,automatic,93000," chevrolet silverado
+",,gas,rwd,40000,clean,4 cylinders,blue,excellent
+pickup,2014,automatic,295000," dodge ram 2500
+",,diesel,,16000,clean,,,
+,2019,automatic,162643," ford f250 4x4
+",,diesel,4wd,26500,clean,,,excellent
+SUV,2016,automatic,84853," nissan rogue sl
+",,gas,fwd,8399,rebuilt,4 cylinders,black,like new
+sedan,2000,automatic,205000," Cadillac Deville
+",,gas,fwd,1000,salvage,8 cylinders,grey,fair
+,1986,manual,6010," chevrolet c10
+",,gas,,40000,clean,,,
+sedan,2018,automatic,71500," dodge charger
+",,gas,rwd,13500,rebuilt,6 cylinders,white,like new
+,2001,automatic,207110," toyota tacoma
+",,gas,rwd,7500,clean,4 cylinders,,good
+SUV,2016,automatic,146000," honda cr-v
+",,gas,fwd,1700,clean,4 cylinders,white,good
+van,2006,automatic,200000," chevrolet express 3500 passenger
+",,gas,rwd,4500,clean,8 cylinders,,good
+pickup,2022,automatic,40000," chevrolet silverado 2500
+",,diesel,,39000,clean,,,
+SUV,2010,automatic,88000," mercedes benz gl450
+",,gas,4wd,8600,clean,8 cylinders,black,like new
+sedan,2011,automatic,97000," Mercedes Benz E350
+",,diesel,rwd,5500,clean,6 cylinders,grey,good
+SUV,2016,automatic,272300," Chevrolet Tahoe LT
+",1GNSCBKC7GR470591,gas,rwd,14000,clean,8 cylinders,black,excellent
+sedan,2001,automatic,214000," Toyota Echo 4door
+",,gas,fwd,4000,clean,4 cylinders,red,like new
+SUV,2007,automatic,145000," nissan xterra
+",,gas,fwd,5500,clean,6 cylinders,blue,good
+coupe,2014,automatic,121000," bmw 228i
+",,gas,rwd,11500,clean,,orange,excellent
+sedan,2020,automatic,57000," nissan sentra sv
+",,gas,,18000,clean,,,
+SUV,2008,automatic,185000," lexus rx 350
+",,gas,fwd,5750,clean,6 cylinders,blue,excellent
+sedan,2014,automatic,123000," lexus ls460
+",,gas,,17000,clean,,,
+truck,2011,automatic,139000," ford f350 super duty lariat
+",,diesel,4wd,28000,clean,8 cylinders,white,excellent
+SUV,2008,automatic,157000," Toyota RAV4 Standard
+",JTMZD33V585088479,gas,fwd,6000,clean,4 cylinders,blue,excellent
+SUV,2013,automatic,170310," Chevrolet Suburban 1/2 Ton LT
+",1GNSCJE07DR126282,gas,rwd,8900,clean,8 cylinders,black,good
+coupe,1971,automatic,1857," chevy camaro
+",124871N504937,gas,rwd,37000,lien,8 cylinders,orange,good
+SUV,2010,automatic,144180," Ford Expedition Eddie Bauer
+",1FMJU1H57AEA99852,gas,rwd,7900,clean,8 cylinders,blue,good
+sedan,2009,automatic,149062," Chevrolet Malibu LT/2LT
+",1G1ZJ57749F185337,gas,fwd,4500,clean,6 cylinders,silver,good
+SUV,2003,automatic,205000," toyota sequoia
+",,gas,,2000,clean,,white,good
+sedan,2011,automatic,174594," Ford Focus SE
+",1FAHP3FN2BW147817,gas,fwd,3900,clean,4 cylinders,grey,fair
+SUV,2012,automatic,158324," Lincoln MKX
+",2LMDJ6JK6CBL13235,gas,fwd,8900,clean,6 cylinders,black,excellent
+convertible,1981,automatic,146000," Mercedes Benz SL380
+",,gas,rwd,10500,clean,8 cylinders,silver,excellent
+sedan,2011,automatic,20," volkswagen jetta
+",,gas,fwd,7350,rebuilt,4 cylinders,blue,like new
+sedan,2009,automatic,179247," Mercedes-Benz E350
+",WDBUF56X89B373675,gas,rwd,4900,clean,6 cylinders,black,good
+SUV,2014,automatic,128670," Ford Escape Titanium
+",1FMCU9J96EUD03945,gas,4wd,8900,clean,4 cylinders,black,excellent
+sedan,2016,automatic,125738," Toyota Corolla L/LE
+",2T1BURHEXGC500135,gas,fwd,9900,clean,4 cylinders,black,excellent
+sedan,2002,automatic,69802," honda civic lx
+",,gas,fwd,6995,clean,4 cylinders,silver,excellent
+pickup,2000,automatic,22100," ford f-250
+",,diesel,4wd,14000,clean,8 cylinders,white,good
+sedan,2013,automatic,117000," bmw 328i coupe
+",,gas,,2800,clean,,,
+pickup,2004,automatic,175000," chevrolet silverado
+",,gas,4wd,5200,clean,,,
+hatchback,2011,automatic,176706," mini cooper hardtop
+",,gas,fwd,4000,clean,4 cylinders,blue,good
+bus,2018,automatic,87000," Chevrolet Bus
+",1HA6GUBB0JN002407,other,fwd,12500,clean,8 cylinders,white,excellent
+,2001,automatic,456893," Ford F550
+",,diesel,rwd,13000,clean,8 cylinders,white,good
+pickup,2014,automatic,176128," gmc sierra 1500
+",1GTN1TEC3EZ398489,gas,rwd,7500,clean,8 cylinders,white,excellent
+pickup,1960,manual,51000," C 20 Chevy
+",,gas,rwd,15000,clean,6 cylinders,green,good
+pickup,2008,automatic,76357," toyota tacoma prerunner v6
+",,gas,rwd,16000,clean,6 cylinders,silver,excellent
+hatchback,2008,automatic,87300," Mini Cooper
+",WMWMF33558TT67766,gas,fwd,3000,clean,4 cylinders,blue,good
+sedan,2009,automatic,148000," chevrolet impala ls
+",,gas,rwd,2500,clean,6 cylinders,red,excellent
+hatchback,2017,automatic,111000," Mitsubishi Mirage ES 1.2L 3Cyl
+",,gas,fwd,5499,clean,4 cylinders,purple,good
+SUV,2009,automatic,136000," Nissan Murano 3.5L 6Cyl
+",,gas,fwd,5299,clean,6 cylinders,red,good
+sedan,2014,automatic,160000," Chevy Impala Limited 3.6L 6Cyl
+",,gas,fwd,4999,rebuilt,6 cylinders,grey,good
+SUV,2013,automatic,104000," Chevrolet Equinox 1LT
+",2GNALDEK6D6263451,gas,fwd,4700,clean,4 cylinders,black,excellent
+SUV,2001,automatic,200000," toyota 4runner
+",,gas,4wd,10999,clean,6 cylinders,,good
+SUV,2013,automatic,156000," toyota highlander
+",,gas,fwd,9800,clean,4 cylinders,silver,good
+hatchback,2011,automatic,191000," Toyota Matt
+",,gas,fwd,4800,clean,4 cylinders,silver,like new
+SUV,2015,automatic,104000," bmw x1 xdrive35i
+",,gas,,7950,clean,,,excellent
+sedan,2016,automatic,118600," acura rlx
+",,gas,fwd,8600,clean,6 cylinders,black,excellent
+pickup,1984,automatic,125000," Chevrolet K10
+",,gas,4wd,13500,clean,8 cylinders,brown,good
+pickup,2003,automatic,120000," chevy silverado ss
+",,gas,,16800,clean,,,
+SUV,2014,automatic,185000," X 90 Volvo SUV
+",,gas,,4300,clean,,,
+,1977,automatic,105335," cadillac eldorado
+",,gas,,13,clean,,,
+truck,2021,automatic,86000," gmc sierra 1500
+",,gas,4wd,28000,clean,,white,excellent
+SUV,2022,automatic,9000," Honda Pilot EXL
+",5FNYF5H53NB038992,gas,fwd,25999,clean,6 cylinders,black,like new
+truck,2014,automatic,139800," chevrolet silverado 1500
+",,gas,4wd,12900,clean,8 cylinders,black,good
+,2021,automatic,29878," volkswagen jetta
+",,gas,fwd,16000,clean,4 cylinders,,like new
+SUV,2007,automatic,172610," toyota matrix
+",,gas,fwd,2600,salvage,4 cylinders,white,fair
+sedan,2020,automatic,30690," Toyota Corolla LE
+",5YFEPRAEXLP136646,gas,fwd,19500,clean,4 cylinders,silver,excellent
+sedan,2016,automatic,140000," toyota corolla
+",,gas,,9100,clean,,black,like new
+pickup,1970,automatic,2200," Chevrolet C20
+",,gas,rwd,34995,rebuilt,8 cylinders,brown,excellent
+SUV,1986,manual,205591," toyota 4runner sr5
+",,gas,4wd,9800,clean,4 cylinders,black,good
+truck,2004,manual,500000," Mack 2004
+",,diesel,,30000,clean,,white,good
+offroad,1975,manual,137000," Jeep CJ-5
+",,gas,4wd,8700,clean,8 cylinders,custom,good
+coupe,2019,automatic,147245," Chevy Camero
+",1G1FB1RS6K0103711,gas,rwd,11990,clean,6 cylinders,custom,good
+bus,2006,automatic,103000," Ford
+",,diesel,,19000,clean,,,
+sedan,2012,automatic,190000," toyota camry se
+",,gas,,6950,clean,,,
+,2014,automatic,221000," ford f550 4x4
+",,diesel,,14750,clean,,,
+truck,2020,automatic,49250," freightliner mt45g
+",,gas,,29950,clean,,,
+pickup,2016,automatic,106000," dodge ram 1500 4x4
+",,gas,,13850,rebuilt,,,
+sedan,2017,automatic,110000," kia optima
+",,gas,,7850,clean,,,
+pickup,2020,automatic,86952," dodge ram 3500
+",,diesel,4wd,49950,rebuilt,6 cylinders,black,like new
+SUV,2014,automatic,111000," bmw x1 xdrive35i
+",,gas,,8750,clean,,,
+sedan,2010,automatic,165000," toyota avalon
+",,gas,,7450,clean,,,
+pickup,2021,automatic,131000," dodge ram 1500 4x4
+",,gas,,16750,clean,,,
+SUV,2010,automatic,120000," land rover lr2
+",,gas,,8550,clean,,,
+SUV,2018,automatic,67000," Toyota Highlander XLE
+",,gas,fwd,26000,clean,6 cylinders,white,excellent
+SUV,2011,automatic,133000," bmw x6 m
+",,gas,,14850,clean,,,
+pickup,2024,automatic,22500," Toyota Tacoma
+",3TYLB5JN8RT002690,gas,4wd,40000,clean,4 cylinders,grey,excellent
+minivan,2007,automatic,114430," Honda Odyssey Touring
+",5FNRL388X7B042360,gas,fwd,6875,clean,6 cylinders,white,good
+sedan,2011,automatic,140000," bmw 335i
+",,gas,,5450,clean,,,
+pickup,2019,automatic,141000," gmc sierra 3500hd 4x4
+",,gas,,27850,clean,,,
+coupe,2015,automatic,106000," bmw 640i gran coupe
+",,gas,,15700,clean,,,
+pickup,2021,automatic,82000," gmc sierra 2500hd
+",,diesel,,37500,clean,,,
+bus,2014,automatic,321231," Chevy Express 4500
+",,diesel,rwd,5900,clean,8 cylinders,white,excellent
+sedan,2009,automatic,133221," jaguar xf
+",,gas,rwd,4250,clean,8 cylinders,black,good
+sedan,2008,automatic,141000," nissan altima 2.5 s
+",,gas,fwd,1000,clean,4 cylinders,grey,fair
+convertible,2011,automatic,126000," volvo c70 t5 convertible
+",,gas,fwd,5200,clean,4 cylinders,black,excellent
+SUV,2014,automatic,118305," Jeep Cherokee Trailhawk
+",1C4PJMBSXEW152454,gas,4wd,12500,clean,6 cylinders,white,good
+sedan,2013,automatic,150000," madza 3
+",,gas,,4500,clean,4 cylinders,,like new
+SUV,2009,automatic,265000," lexus rx 350
+",,gas,fwd,5700,clean,6 cylinders,grey,excellent
+SUV,2016,automatic,113608," Dodge Journey JC SE
+",3C4PDCAB4GT247877,gas,fwd,6495,clean,4 cylinders,red,excellent
+,2006,automatic,235000," toyota camry
+",,gas,,2900,clean,,,good
+coupe,1963,manual,58000," Chevrolet Impala
+",,gas,rwd,63000,clean,8 cylinders,red,excellent
+pickup,2008,automatic,171000," chevrolet silverado
+",,gas,,7800,clean,,,
+sedan,2011,automatic,178000," honda accord
+",,gas,fwd,3800,clean,6 cylinders,black,excellent
+hatchback,2016,automatic,108000," hyundai veloster
+",,gas,,2250,clean,4 cylinders,black,excellent
+convertible,2011,automatic,67000," ford mustang
+",,gas,rwd,21850,clean,8 cylinders,black,excellent
+hatchback,2011,manual,106000," ford fiesta se
+",,gas,fwd,3999,clean,4 cylinders,blue,excellent
+pickup,2009,automatic,230000," Ford F250 XL
+",,gas,,5900,clean,8 cylinders,,
+,1993,automatic,1000," Ford Mustang
+",,other,rwd,85000,missing,8 cylinders,green,good
+,2000,automatic,1000," Ford Mustang
+",,gas,,100000,missing,,,
+coupe,2014,automatic,118541," hyundai veloster
+",,gas,,5500,clean,4 cylinders,white,excellent
+coupe,2012,automatic,140000," nissan altima
+",,gas,fwd,4500,clean,4 cylinders,white,like new
+coupe,2004,automatic,93000," ford mustang v6
+",,gas,rwd,4500,clean,6 cylinders,,good
+,1967,manual,99999," chevy nova
+",,gas,,40000,clean,,,excellent
+SUV,2013,automatic,126000," toyota venza xle
+",,gas,,3150,parts only,4 cylinders,grey,fair
+SUV,2013,automatic,150000," dodge journey
+",,gas,fwd,2500,clean,6 cylinders,grey,fair
+,1979,automatic,82000," pontiac firebird trans am ws6
+",,gas,,29900,clean,,,excellent
+sedan,2014,automatic,151292," Ford Taurus SEL
+",1FAHP2E85EG127310,gas,fwd,5900,clean,6 cylinders,silver,excellent
+,1969,manual,999," Chevrolet Nova
+",,gas,,59900,clean,,,
+sedan,2005,automatic,162287," ford taurus
+",,gas,fwd,1995,clean,6 cylinders,red,fair
+SUV,2005,manual,98761," Jeep Wrangler TJ
+",,gas,4wd,8000,clean,6 cylinders,green,good
+truck,2014,automatic,600000," international prostar
+",,diesel,,13500,clean,,,
+hatchback,2007,automatic,170000," toyota prius
+",,hybrid,fwd,3000,clean,4 cylinders,blue,excellent
+pickup,2018,automatic,165000," chevy silverado 1500
+",,gas,,14600,clean,,,
+hatchback,2008,automatic,180000," PT Cruiser
+",,gas,fwd,1100,clean,4 cylinders,grey,good
+convertible,2018,automatic,67320," Mercedes Benz C300 Convertible
+",,gas,,26500,clean,4 cylinders,grey,excellent
+pickup,1991,automatic,166000," ford f-350
+",,gas,rwd,15250,clean,8 cylinders,purple,excellent
+pickup,2006,automatic,200000," ford f350
+",,gas,,3200,clean,,,
+pickup,2004,automatic,164000," ford f-150 supercrew shortbox
+",,gas,4wd,6000,clean,8 cylinders,silver,excellent
+sedan,2013,automatic,150000," mazda 3
+",,gas,,4500,clean,4 cylinders,,like new
+,2010,automatic,170000," ford fusion
+",,gas,,3250,clean,,,
+minivan,2005,automatic,187000," toyota sienna ce
+",,gas,,4200,clean,6 cylinders,white,good
+coupe,2008,automatic,228000," infiniti g35
+",,gas,rwd,3800,clean,6 cylinders,,good
+van,2022,automatic,70000," chrysler voyager
+",,gas,fwd,43000,clean,6 cylinders,white,excellent
+coupe,2015,automatic,113000," bmw 435i xdrive
+",,gas,,6950,clean,,,
+pickup,2003,automatic,160000," dodge ram 1500
+",,gas,,6500,rebuilt,,,
+,2011,automatic,195," ford focus
+",,gas,rwd,2350,clean,4 cylinders,,excellent
+offroad,2007,automatic,163000," dodge ram 1500
+",,gas,4wd,6000,clean,8 cylinders,black,good
+sedan,2015,automatic,68000," toyota corolla
+",,gas,fwd,9550,rebuilt,4 cylinders,grey,excellent
+sedan,2018,automatic,88000," toyota yaris ia
+",,gas,fwd,10800,clean,4 cylinders,black,excellent
+coupe,2018,automatic,29550," chevy camaro ss
+",,gas,rwd,34200,clean,8 cylinders,white,like new
+SUV,2017,automatic,129000," bmw x5 sdrive35i
+",,diesel,rwd,13795,clean,6 cylinders,black,like new
+,1979,automatic,89000," pontiac firebird trans am
+",,gas,,34900,clean,,,excellent
+SUV,2021,automatic,39000," Subaru Ascent
+",4S4WMAJDXM3437851,gas,4wd,17700,rebuilt,4 cylinders,white,
+SUV,2022,automatic,32000," Toyota RAV4 XLE
+",2T3RWRFV9NW141990,hybrid,4wd,22700,rebuilt,4 cylinders,grey,excellent
+pickup,2022,automatic,47000," Toyota Tacoma SR5
+",3TMCZ5AN3NM499312,gas,4wd,20800,rebuilt,6 cylinders,black,excellent
+SUV,2021,automatic,32100," Ford Expedition XLT
+",1FMJU1HT8MEA83856,gas,rwd,19800,rebuilt,6 cylinders,silver,excellent
+coupe,2007,automatic,213351," honda accord
+",,gas,,4200,clean,4 cylinders,,
+pickup,2019,automatic,30100," Ford Ranger
+",1FTER1EH7KLA98168,gas,rwd,14700,rebuilt,4 cylinders,white,excellent
+convertible,2002,automatic,113000," FORD THUNDERBIRD HARD TOP CONVERTIBLE
+",,gas,,12999,clean,,,excellent
+convertible,2005,automatic,117000," CHRSLER CROSSFIRE LIMITED ROADSTER
+",,gas,,7499,clean,,,excellent
+sedan,2012,automatic,78000," SUBARU LEGACY 2.5 LIMITED
+",,gas,4wd,10999,clean,4 cylinders,blue,excellent
+sedan,2013,automatic,81000," volvo s60 T5 4door sedan
+",,gas,,10999,clean,4 cylinders,red,like new
+coupe,1938,manual,55000," Plymouth Coupe
+",,gas,rwd,11000,clean,6 cylinders,custom,fair
+SUV,2013,automatic,161803," ford edge sel
+",,gas,,6750,clean,4 cylinders,custom,good
+sedan,2000,automatic,148030," mercury grand marquis
+",,gas,rwd,3500,clean,8 cylinders,blue,excellent
+coupe,1966,manual,240," Corvette Coupe
+",,gas,rwd,139900,clean,8 cylinders,blue,like new
+convertible,1949,manual,1000," Willys
+",,gas,4wd,47000,clean,6 cylinders,blue,excellent
+pickup,2017,other,188023," chevy silverado 2500hd
+",,gas,rwd,16500,clean,,,excellent
+pickup,2019,automatic,140232," ford f250 4x4
+",,diesel,4wd,25900,clean,,,like new
+pickup,2019,automatic,200324," ford f350 4x4
+",,diesel,4wd,25500,clean,,,like new
+pickup,2018,automatic,170222," ford f150
+",,gas,fwd,10900,clean,6 cylinders,,like new
+pickup,2017,automatic,170232," chevy silverado 3500hd 4x4
+",,diesel,4wd,24900,clean,,,good
+pickup,2015,automatic,160343," gmc sierra 2500hd
+",,gas,4wd,18900,clean,,,like new
+pickup,2017,automatic,180131," chevy silverado 2500hd 4x4
+",,diesel,4wd,24500,clean,,,like new
+,2013,automatic,180367," chevy silverado 3500hd 4x4
+",,diesel,4wd,18500,clean,,,like new
+,2021,automatic,120364," ford f150 xlt
+",,gas,4wd,24900,clean,8 cylinders,,like new
+,2018,automatic,160257," chevy silverado 2500hd
+",,gas,rwd,18900,clean,8 cylinders,,excellent
+minivan,2008,automatic,107000," Kia Sedona
+",,gas,,3900,clean,,,excellent
+pickup,2018,automatic,249888," Ram 2500 Big horn
+",3C6UR5JL0JG202581,diesel,4wd,25000,clean,6 cylinders,white,excellent
+pickup,2024,automatic,7244," ford f450 super duty
+",,diesel,4wd,109900,lien,8 cylinders,blue,like new
+SUV,2008,automatic,101730," honda cr-v
+",,gas,fwd,8500,clean,4 cylinders,black,good
+truck,2000,manual,800000," Mack
+",,diesel,,27000,clean,,,good
+sedan,2007,automatic,186000," Acura TL
+",,gas,,3500,clean,,,
+pickup,2002,automatic,211000," chevrolet silverado
+",,gas,,8500,clean,,,
+hatchback,2012,automatic,180000," scion tc
+",,gas,fwd,2500,clean,4 cylinders,silver,salvage
+sedan,2013,automatic,196000," kia rio
+",,gas,,2200,rebuilt,,white,good
+,1966,other,10000," chevrolet malibu
+",136,gas,,15000,clean,,,good
+SUV,2018,automatic,74804," Kia Soul BASE
+",KNDJN2A29J7580391,gas,,7600,clean,4 cylinders,silver,like new
+hatchback,2004,manual,155000," hyundai accent
+",,gas,fwd,2400,clean,4 cylinders,silver,good
+sedan,2015,automatic,154000," subaru impreza
+",,gas,4wd,8000,clean,4 cylinders,black,like new
+pickup,2023,automatic,15132," Ford Maverick
+",,gas,fwd,25500,clean,4 cylinders,red,like new
+hatchback,2008,manual,129000," volvo c30 t5
+",,gas,,6500,clean,,,good
+pickup,2003,automatic,153000," Ford f-150
+",,gas,rwd,16500,clean,8 cylinders,black,good
+SUV,2016,automatic,112000," Infiniti QX60
+",5N1AL0MM0GC520731,gas,4wd,9900,clean,6 cylinders,blue,good
+sedan,2003,automatic,120084," Buick LeSabre Limited
+",1G4HR54K83U233456,gas,,2700,clean,6 cylinders,brown,excellent
+sedan,1962,manual,70000," volkswagen bug
+",,gas,rwd,6000,clean,4 cylinders,white,good
+wagon,2001,automatic,67175," ford focus se
+",,gas,,3000,clean,,,
+sedan,2002,automatic,164000," honda civic
+",,gas,fwd,2100,clean,4 cylinders,white,good
+SUV,1999,automatic,200000," Lincoln Navigator Base
+",5LMPU28L0XLJ14482,gas,4wd,800,clean,8 cylinders,red,
+pickup,2010,automatic,81000," ford f-150
+",,gas,rwd,9900,clean,8 cylinders,silver,excellent
+,2007,automatic,33000," lexus sc 430
+",,gas,,12000,rebuilt,8 cylinders,,
+van,2018,automatic,178654," chevrolet express 3500
+",,gas,rwd,16990,clean,8 cylinders,white,excellent
+truck,2003,automatic,291006," gmc sierra 1500
+",,gas,rwd,4100,clean,6 cylinders,white,good
+pickup,2008,automatic,150000," Nissan Titan
+",1N6BA07D48N332016,gas,rwd,3500,clean,8 cylinders,silver,
+SUV,2012,automatic,113000," jeep liberty sport
+",,gas,fwd,5950,clean,6 cylinders,black,good
+sedan,1999,automatic,177233," toyota camry le
+",JT2BG22K9X0281670,gas,fwd,2999,clean,4 cylinders,grey,good
+sedan,2023,automatic,20017," Acura TLX Technology
+",,gas,,33900,clean,,black,excellent
+truck,1947,manual,123," gmc 100
+",,gas,rwd,27500,clean,6 cylinders,green,excellent
+coupe,2010,automatic,119000," nissan altima
+",,gas,rwd,3900,clean,6 cylinders,white,good
+van,2017,automatic,90147," ford transit connect
+",,gas,fwd,13500,clean,4 cylinders,white,like new
+sedan,2016,automatic,52890," kia optima
+",,gas,fwd,11200,clean,4 cylinders,silver,like new
+minivan,2009,automatic,90338," nissan quest
+",,gas,fwd,12500,clean,6 cylinders,grey,like new
+sedan,2016,automatic,73762," honda civic lx
+",,gas,fwd,12900,clean,4 cylinders,silver,like new
+sedan,2009,automatic,194000," Hyandui azera
+",,gas,,1700,clean,5 cylinders,custom,fair
+sedan,2017,automatic,165000," nissan maxima
+",,gas,,8500,clean,,blue,like new
+pickup,2021,automatic,43000," Chevrolet Silverado
+",,gas,4wd,51000,clean,8 cylinders,black,like new
+SUV,2013,automatic,149000," Cadillac Escalade
+",,gas,rwd,10500,clean,8 cylinders,white,excellent
+sedan,2013,automatic,150000," mazda 3
+",,gas,,4500,clean,4 cylinders,,excellent
+pickup,2014,automatic,154000," chevy silverado 1500
+",,gas,,14900,clean,,,good
+SUV,2020,automatic,146000," cadillac escalade
+",,gas,4wd,27000,clean,8 cylinders,black,good
+pickup,2013,automatic,190000," ford f-150
+",,gas,,9500,clean,,,
+coupe,2014,automatic,118541," hyundai veloster
+",,gas,,5500,clean,4 cylinders,white,excellent
+SUV,2016,automatic,189000," Nissan Rogue
+",5N1AT2MT5GC765043,gas,fwd,5200,clean,4 cylinders,white,excellent
+pickup,2015,automatic,85200," ford f-150
+",1FTEW1CG0FFB97390,gas,rwd,26500,clean,6 cylinders,green,excellent
+SUV,2017,automatic,153410," gmc terrain sle
+",,gas,fwd,5900,clean,4 cylinders,white,excellent
+pickup,2008,automatic,999999," ford f150 crew cab 4x4
+",,gas,4wd,6200,rebuilt,8 cylinders,white,excellent
+minivan,2012,automatic,123575," Chrysler Town and Country Touring-L
+",2C4RC1CG1CR413701,gas,fwd,6750,clean,6 cylinders,brown,like new
+SUV,2010,automatic,200000," Nissan Murano le spot utility 4D
+",JN8AZ1MU4AW012121,gas,,4800,clean,,brown,like new
+SUV,2013,automatic,190234," Chevrolet Avalanche 1/2 Ton LT
+",3GNMCFE03DG248045,gas,fwd,10000,clean,8 cylinders,white,good
+sedan,2006,automatic,178000," Infinity
+",,gas,rwd,4200,clean,6 cylinders,grey,good
+pickup,2010,automatic,208000," Toyota Tundra double cap SR5
+",5TFRM5F18AX020482,gas,rwd,10900,clean,8 cylinders,black,good
+SUV,2003,automatic,180000," ford f-150
+",,gas,rwd,4300,clean,8 cylinders,red,good
+pickup,2011,automatic,174000," Chevrolet Silverado 1500 work truck
+",3GCPCREA0BG146702,gas,rwd,10900,clean,8 cylinders,black,good
+SUV,2013,automatic,104000," ford edge
+",,gas,fwd,9500,clean,6 cylinders,white,excellent
+pickup,2007,automatic,187346," Ford F-150 F-Series Flare Side
+",1FTRF02257KB94012,gas,rwd,4800,clean,6 cylinders,red,good
+SUV,2009,manual,151234," Jeep Wrangler JK X
+",1J4FA24159L710992,gas,4wd,7500,clean,6 cylinders,black,good
+SUV,2021,automatic,110000," gmc sierra 2500hd
+",,diesel,4wd,43200,clean,8 cylinders,black,good
+pickup,2014,automatic,160000," ford f150 xlt
+",,gas,,13500,clean,,black,good
+SUV,2009,automatic,144000," chevrolet tahoe
+",,gas,,7500,clean,8 cylinders,blue,good
+pickup,1996,automatic,201000," gmc sierra 1500
+",,gas,4wd,3800,clean,8 cylinders,black,good
+pickup,2012,automatic,200000," chevrolet silverado 1500
+",,gas,,6000,clean,,white,good
+sedan,2009,automatic,140000," mazda 6
+",,gas,,3850,clean,4 cylinders,black,good
+pickup,1981,automatic,58129," chevrolet silverado
+",,gas,,28000,clean,8 cylinders,,excellent
+coupe,2017,automatic,120000," ford focus
+",,gas,fwd,3700,rebuilt,4 cylinders,white,good
+SUV,2009,automatic,139000," jeep wrangler unlimited
+",,gas,4wd,15700,clean,6 cylinders,black,excellent
+sedan,2016,automatic,150000," nissan altima
+",,gas,,4750,clean,,,
+pickup,2009,automatic,156000," Chevrolet Silverado 1/2 Ton LT
+",2GCEC290791119466,gas,rwd,8700,clean,8 cylinders,white,good
+,2008,automatic,165000," bmw 550i
+",,gas,,3500,clean,,,
+wagon,2010,automatic,127155," volvo xc60 t6
+",,gas,4wd,4465,rebuilt,6 cylinders,silver,good
+SUV,2018,automatic,132000," chevrolet suburban
+",,gas,,22000,clean,,silver,good
+sedan,2007,automatic,230000," lincoln town car
+",,gas,,2750,rebuilt,8 cylinders,white,good
+coupe,2011,automatic,81162," cadillac cts coupe
+",,gas,rwd,12500,clean,6 cylinders,white,good
+convertible,2002,manual,145000," corvette c5
+",,gas,,7999,clean,8 cylinders,red,good
+pickup,2000,automatic,200000," gmc sierra 1500
+",,gas,rwd,4900,clean,8 cylinders,,like new
+sedan,2017,automatic,85573," volkswagen cc
+",,gas,,8800,clean,4 cylinders,black,excellent
+sedan,2019,automatic,81765," volkswagen jetta sel
+",,gas,,10800,clean,4 cylinders,red,excellent
+sedan,2005,automatic,112703," volkswagen jetta tdi
+",,gas,,4999,clean,4 cylinders,grey,good
+SUV,2013,automatic,204000," infinity QX56
+",,gas,fwd,10490,clean,8 cylinders,white,good
+,1979,manual,66538," Triumph Spitfire
+",,gas,rwd,3500,clean,4 cylinders,white,
+sedan,2011,automatic,116065," Mercedes Benz C300
+",,gas,rwd,6700,clean,6 cylinders,black,good
+van,1998,automatic,123," chevrolet express
+",,gas,,7800,clean,,,
+sedan,2010,automatic,110017," toyota camry
+",4T1BF3EK1AU513234,gas,fwd,4500,clean,4 cylinders,grey,fair
+sedan,1952,automatic,99999," chevrolet
+",,gas,,12500,clean,8 cylinders,,good
+pickup,2021,automatic,450000," chevy silverado
+",,gas,rwd,20000,clean,8 cylinders,blue,like new
+sedan,2012,automatic,118000," Cadillac CTS Premium
+",1G6DS5E35C0156750,gas,4wd,5800,rebuilt,6 cylinders,,
+SUV,2014,automatic,187123," gmc yukon
+",,gas,,3950,clean,,,
+SUV,2013,automatic,104600," Ford Escape SEL
+",1FMCU0H93DUB95218,gas,fwd,5000,clean,4 cylinders,red,like new
+pickup,2003,automatic,200000," chevy silverado
+",,gas,rwd,3300,clean,8 cylinders,,good
+hatchback,2017,automatic,101000," Hyundai Accent
+",KMHCT5AE6HU313047,gas,fwd,6900,clean,4 cylinders,white,good
+SUV,2015,automatic,137866," gmc yukon
+",,gas,rwd,14950,salvage,8 cylinders,white,excellent
+SUV,2017,automatic,95," Porsche Macan
+",,gas,,17900,clean,,,
+SUV,2011,automatic,170000," acura mdx
+",,gas,4wd,7900,clean,6 cylinders,black,good
+SUV,2018,automatic,125," VW Tiguan
+",,gas,,10900,clean,,,
+,2010,automatic,156800," honda civic
+",,gas,,4700,clean,,,good
+SUV,2016,automatic,119880," Jeep Compass
+",,gas,fwd,6000,clean,4 cylinders,white,excellent
+SUV,2017,automatic,101463," ford escape se
+",,gas,,6900,clean,,,
+coupe,1974,automatic,59000," chevrolet corvette
+",,gas,rwd,15500,clean,8 cylinders,white,excellent
+pickup,2000,automatic,320000," chevrolet silverado 1500
+",,gas,rwd,3600,clean,8 cylinders,,good
+,2000,manual,130," bmw z3 roadster
+",,gas,,5900,clean,,,
+SUV,2007,automatic,171000," honda cr-v
+",,gas,4wd,5200,clean,4 cylinders,,
+pickup,2004,automatic,140000," Ford F-250 F-Series
+",1FTNW20P14ED80347,diesel,rwd,11500,clean,8 cylinders,white,good
+SUV,2014,automatic,91425," ford escape se
+",,gas,,5900,clean,,,
+SUV,2016,automatic,115531," Nissan Pathfinder
+",,gas,,7600,clean,,,
+SUV,2007,automatic,160000," bmw x3
+",,gas,,4995,clean,,,
+sedan,2013,automatic,85000," lincoln mkz
+",,gas,fwd,7999,clean,4 cylinders,white,excellent
+van,1993,manual,137000," volkswagen eurovan
+",,gas,,6500,clean,,,
+SUV,2019,automatic,71000," Acura MDX
+",,gas,,25000,clean,6 cylinders,white,good
+sedan,2011,automatic,190000," mercedes benz e350
+",,gas,,4999,clean,8 cylinders,,good
+coupe,2007,automatic,117000," ford mustang premium
+",,gas,rwd,6900,clean,6 cylinders,blue,excellent
+coupe,2010,automatic,138000," chevrolet camaro lt rs
+",,gas,,8000,clean,6 cylinders,,like new
+,2008,automatic,161000," dodge ram 1500
+",,gas,rwd,6500,clean,6 cylinders,,
