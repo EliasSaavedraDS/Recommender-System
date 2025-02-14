@@ -29,7 +29,7 @@ user_agents = [
 
 seen_urls = set()
 unique_field_names = set()
-search_querry = ["dallas",'houston',"austin"]
+search_querry = ["dallas","austin","houston"]
 logging.basicConfig(filename='scraping_log.txt', 
                     level=logging.INFO, 
                     format='%(asctime)s - %(levelname)s - %(message)s')
@@ -184,20 +184,20 @@ def get_car_details(url):
     return attributes
         
 def initialize_csv():
-    with open("CraigslistDataset.csv", 'w', newline='', encoding='utf-8') as f:
+    with open("Houston&AustinDataset.csv", 'w', newline='', encoding='utf-8') as f:
        pass
     print('CSV created')
 
 def append_to_csv(page_details):
     field_names = list(unique_field_names)
-    file_path = "CraigslistDataset.csv"
+    file_path = "Houston&AustinDataset.csv"
 
     # Check the file size before reading
     if os.path.getsize(file_path) == 0:  # File is empty
         with open(file_path, 'a', newline='', encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=field_names)
             writer.writeheader()
-    with open("CraigslistDataset.csv", 'a', newline='', encoding='utf-8') as f:
+    with open("Houston&AustinDataset.csv", 'a', newline='', encoding='utf-8') as f:
         writer = csv.DictWriter(f, fieldnames=field_names)
         writer.writerows(page_details)
 
@@ -210,6 +210,7 @@ def clean_data(value):
 
 def main():
     # base_url = "https://dallas.craigslist.org/search/cta?purveyor=owner#search=1~gallery~0~0"
+    batch_size = 600
     
     logging.info("Started scraping...")
     initialize_csv()
@@ -221,19 +222,25 @@ def main():
             break
         else:
             logging.info(f"Found {len(car_urls)} car URLs for {location}.")
-    
+        counter = 1
         page_details = []
         for url in car_urls:
+            if len(page_details) >= batch_size:
+                append_to_csv(page_details)  
+                logging.info(f"Saved {len(page_details)} listings from {location}")
+                page_details.clear()
             if url not in seen_urls:
                 details = get_car_details(url)
                 if details:
+                    print(f"Instance: {counter}")
                     print(details)
                     print("-" * 40)
                     page_details.append(details)
                 else:
                     logging.warning(f"Skipping empty details for {url}")
                     continue
-                seen_urls.add(url)    
+                seen_urls.add(url)  
+                counter+=1  
                 time.sleep(random.uniform(5, 10))
             
         if page_details:

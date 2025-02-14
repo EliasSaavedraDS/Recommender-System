@@ -7,4 +7,5 @@ soupsieve==2.6
 urllib3==2.3.0
 setuptools
 selenium
+pandas
 -e .
