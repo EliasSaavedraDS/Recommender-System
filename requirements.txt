@@ -8,4 +8,8 @@ urllib3==2.3.0
 setuptools
 selenium
 pandas
+numpy
+matplotlib
+seaborn
+ipykernel
 -e .
