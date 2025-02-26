@@ -12,4 +12,6 @@ numpy
 matplotlib
 seaborn
 ipykernel
+scipy
+scikit-learn
 -e .
