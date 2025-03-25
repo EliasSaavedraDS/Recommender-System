@@ -2,3 +2,5 @@ envir/
 *.egg-info/
 __pycache__/
 *.pyc
+logs/
+mlproject.egg-info/

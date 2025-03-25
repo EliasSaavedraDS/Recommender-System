@@ -14,4 +14,5 @@ seaborn
 ipykernel
 scipy
 scikit-learn
+dill
 -e .
