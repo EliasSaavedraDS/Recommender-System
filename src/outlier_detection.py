@@ -6,10 +6,8 @@ from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import StandardScaler
 from mpl_toolkits.mplot3d import Axes3D
 
-def train_isolation_forest(data_copy, features, n_estimators=1000, bootstrap=False, max_samples='auto'):
+def train_isolation_forest(X_train, n_estimators=1000, bootstrap=False, max_samples='auto'):
     '''This function takes as input the DataFrame and corresponding features and fit Isolation forest'''
-
-    X_train = data_copy[features]
 
     clf=IsolationForest(n_estimators=n_estimators, max_samples=max_samples, \
        bootstrap=bootstrap, n_jobs=-1, random_state=13, verbose=0)
@@ -18,21 +16,19 @@ def train_isolation_forest(data_copy, features, n_estimators=1000, bootstrap=Fal
 
     return clf
 
-def get_anomaly_and_score(data_copy, features, clf):
+def get_anomaly_and_score(X_train, clf):
     '''This function takes as input DataFrame, trained model for outliers and imputer used in training
     and update columns with anomaly (1 being normal and -1 being outlier)'''
-
-    X_train = data_copy[features]
-
+    
     pred = clf.predict(X_train)
-
-    data_copy['anomaly']=pred
-
     pred_score = clf.score_samples(X_train)
+    X_train = pd.DataFrame(X_train)
+    
+    X_train['anomaly']=pred
 
-    data_copy['score_anomaly']=pred_score
+    X_train['score_anomaly']=pred_score
 
-    return data_copy
+    return X_train
 
 def get_outliers_index(new_data,mode = 'normal', threshold = -0.5 , percent = 0.5):
     '''This function takes as input a DataFrame and return indexes of outliers and not outliers.
