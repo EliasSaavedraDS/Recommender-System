@@ -56,9 +56,9 @@ class DataTransformation:
                 steps=[
                 ("imputer",SimpleImputer(strategy="median")),
                 ("outliers_handler", OutlierHandler(columns=numerical_columns)),
-                ("z_score_method",ZScoreTransformer(columns = ['odometer'])),
-                ("OutlierRemoval",OutlierRemover()),
-                ("scaler",StandardScaler())
+                ("z_score_method",ZScoreTransformer()),
+                #("OutlierRemoval",OutlierRemover()),
+                #("scaler",StandardScaler())
                 ]
             )
 
@@ -75,16 +75,19 @@ class DataTransformation:
             logging.info(f"Numerical columns: {numerical_columns}")
 
 
-            preprocessor=ColumnTransformer(
-                [
-                ("num_pipeline",num_pipeline,numerical_columns),
-                ("cat_pipelines",cat_pipeline,categorical_columns),
-                ("drop",DropColumn(['post_id']),['post_id'])
-
-                ],
-                remainder="passthrough"
+            preprocessor = Pipeline(
+                steps=[
+                    ("transformations", ColumnTransformer(
+                        transformers=[
+                            ("num_pipeline", num_pipeline, numerical_columns),
+                            ("cat_pipeline", cat_pipeline, categorical_columns)
+                        ],
+                        remainder="drop"
+                    )),
+                    ("outlier_remover", OutlierRemover())
+                ]
             )
-
+           
             return preprocessor
         
         except Exception as e:
@@ -102,10 +105,10 @@ class DataTransformation:
             feature_obj = FeatureCreation()
 
             train_df = clean_obj.fit_transform(train_df)
-            test_df = clean_obj.fit_transform(test_df)
+            test_df = clean_obj.transform(test_df)
 
             train_df = feature_obj.fit_transform(train_df)
-            test_df = feature_obj.fit_transform(test_df)
+            test_df = feature_obj.transform(test_df)
 
 
             logging.info("Cleaned/Created features to train and test data")
@@ -128,6 +131,16 @@ class DataTransformation:
 
             input_feature_train_arr=preprocessing_obj.fit_transform(input_feature_train_df)
             input_feature_test_arr=preprocessing_obj.transform(input_feature_test_df)
+
+            logging.info(f"Training data shape after fit_transform: {input_feature_train_arr.shape}")
+            logging.info(f"Test data shape after transform: {input_feature_test_arr.shape}")
+
+
+            target_feature_train_df = target_feature_train_df.iloc[:input_feature_train_arr.shape[0]]
+            target_feature_test_df = target_feature_test_df.iloc[:input_feature_test_arr.shape[0]]
+
+            logging.info(f"Target data shape after alignement: {target_feature_train_df.shape}")
+            logging.info(f"Target data shape after alignement: {target_feature_test_df.shape}")
 
             train_arr = np.c_[
                 input_feature_train_arr, np.array(target_feature_train_df)
@@ -215,35 +228,45 @@ class OutlierHandler(BaseEstimator, TransformerMixin): #Removes 435 instances
         """Detects and removes outliers."""
         data = X.copy()
         X = pd.DataFrame(X, columns = self.columns)
+        
        
         new_data = get_anomaly_and_score(data, self.clf)
         outlier_index, clean_index = get_outliers_index(new_data, mode='threshold', threshold=self.threshold)
-        #print(f"SHAPE BEFORE: {X.shape}")
         
+        X["outlier_flag"] = 'non-outlier'
+        X.loc[outlier_index, "outlier_flag"] = 'outlier'
+        #print(f'count {X[X['outlier_flag'] == "outlier"].shape[0]}')
 
-        X = X.loc[clean_index].reset_index(drop=True)
-        #print(f"SHAPE after: {X.shape}")
+        #X = X.loc[clean_index].reset_index(drop=True)
+       
 
         return X
 
 class ZScoreTransformer(BaseEstimator, TransformerMixin):
-    def __init__(self, threshold=2.5, columns = None):
+    def __init__(self, threshold=2.5):
         self.threshold = threshold
-        self.columns = columns
+        
 
     def fit(self, X, y=None):
         return self
     
     def transform(self, X):
-        
-        log_X = np.log1p(X)
+        data = X.copy()
+        clean_data = data[data["outlier_flag"] == 'non-outlier'].copy()
+
+        log_X = np.log1p(clean_data['odometer'])
 
         z_scores = np.abs(stats.zscore(log_X, nan_policy='omit'))
-        X["outlier_flag"] = 0
-        X["outlier_flag"] = (z_scores > self.threshold).astype(int).max(axis=1)  
-        # X[np.all(z_scores < self.threshold, axis=1)]
-    
-        return X
+
+        new_outlier_index = np.where((z_scores > self.threshold))[0]
+        clean_data.loc[clean_data.index[new_outlier_index], "outlier_flag"] = 'outlier'
+        data.loc[new_outlier_index, "outlier_flag"] = "outlier"
+
+        clean_data = data[data["outlier_flag"] == 'non-outlier'].copy()
+        clean_data['odometer'], parameters = stats.boxcox(clean_data['odometer'])
+        data.loc[clean_data.index, 'odometer'] = clean_data['odometer']
+
+        return data
 
 
 class Encoder(BaseEstimator,TransformerMixin):
@@ -274,11 +297,15 @@ class OutlierRemover(BaseEstimator, TransformerMixin): #Removes 196 instances
         return self
 
     def transform(self, X):
-        X = pd.DataFrame(X)
-        X = X[X["outlier_flag"] == 0].drop(columns=["outlier_flag"]).reset_index(drop=True)
-        X['odometer'], parameters = stats.boxcox(X['odometer'])
-        #print(f"SHAPE OF X AFTER: {X.shape}")
-        return X
+        #df = pd.DataFrame(X)
+        #df = df[df["outlier_flag"] == 0].drop(columns=["outlier_flag"]).reset_index(drop=True)
+        #X['odometer'], parameters = stats.boxcox(X['odometer'])
+
+        df = pd.DataFrame(X)
+        cleaned_df = df[~df.isin(['outlier']).any(axis=1)].reset_index(drop=True)
+        cleaned_df = cleaned_df.drop(columns=[col for col in cleaned_df.columns if 'non-outlier' in cleaned_df[col].values])
+
+        return cleaned_df.values
 
 class DropColumn(BaseEstimator, TransformerMixin):
     def __init__(self, cols=[]):
@@ -288,3 +315,4 @@ class DropColumn(BaseEstimator, TransformerMixin):
     def transform(self, X, y=None):
         X = X.copy()
         return X.drop(columns=self.cols, axis=1, errors='ignore')
+    

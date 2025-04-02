@@ -15,4 +15,6 @@ ipykernel
 scipy
 scikit-learn
 dill
+catboost
+xgboost
 -e .
