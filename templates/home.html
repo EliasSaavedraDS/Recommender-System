@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Cars to Buy and Sell</title>
+</head>
+<body>
+    <h1>Top Picks</h1>
+    <ul>
+        {% for car in cars %}
+            <li>
+                <strong>{{ car.model }}</strong><br>
+                Residual Profit: ${{ car.pred_price }}<br>
+                <a href="{{ car.url }}" target="_blank">View Listing</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
