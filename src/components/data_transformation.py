@@ -152,8 +152,8 @@ class DataTransformation:
             # target_feature_test_df, input_feature_test_df = target_feature_test_df.align(input_feature_test_df, join='inner')
             input_feature_train_arr = input_feature_train_arr.reset_index(drop=True)
             target_feature_train_df = target_feature_train_df.reset_index(drop=True)
-            input_feature_test_arr = input_feature_train_arr.reset_index(drop=True)
-            target_feature_test_df = target_feature_train_df.reset_index(drop=True)
+            input_feature_test_arr = input_feature_test_arr.reset_index(drop=True)
+            target_feature_test_df = target_feature_test_df.reset_index(drop=True)
 
 
             logging.info(f"Training data shape after fit_transform: {input_feature_train_arr.shape}")

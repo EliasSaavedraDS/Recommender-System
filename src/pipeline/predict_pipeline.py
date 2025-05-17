@@ -28,11 +28,11 @@ class PredictPipeline:
             df['pred_price'] = preds
 
             
-            # df['residual'] = df['pred_price'] - df['price']
-            # df = df[df['residual'] > 0].sort_values(by='residual', ascending=False)
-            df = df[df['pred_price'] > 0].sort_values(by='pred_price', ascending=False)
+            df['residual'] = df['pred_price'] - df['price']
+            df = df[df['residual'] > 0].sort_values(by='residual', ascending=False)
+            # df = df[df['pred_price'] > 0].sort_values(by='pred_price', ascending=False)
 
-            return df[["model", "pred_price", "url"]].to_dict(orient="records")
+            return df[["model", "residual", "url","make"]].to_dict(orient="records")
         
         except Exception as e:
             raise CustomException(e,sys)

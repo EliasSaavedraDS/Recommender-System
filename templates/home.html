@@ -6,11 +6,21 @@
 </head>
 <body>
     <h1>Top Picks</h1>
+    <form method="get" action="/predictdata">
+        <label for="make">Filter by Make:</label>
+        <select name="make" id="make">
+            <option value="">-- All Makes --</option>
+            {% for make in available_makes %}
+                <option value="{{ make }}" {% if make == selected_make %}selected{% endif %}>{{ make }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Filter</button>
+    </form>
     <ul>
         {% for car in cars %}
             <li>
                 <strong>{{ car.model }}</strong><br>
-                Residual Profit: ${{ car.pred_price }}<br>
+                Residual Profit: ${{ car.residual }}<br>
                 <a href="{{ car.url }}" target="_blank">View Listing</a>
             </li>
         {% endfor %}
