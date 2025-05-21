@@ -1,90 +1,51 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-2:530743905194:task-definition/cars-task-def:1",
-    "containerDefinitions": [
+  "family": "cars-task-def",
+  "executionRoleArn": "arn:aws:iam::530743905194:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "cars-container",
+      "image": "530743905194.dkr.ecr.us-east-2.amazonaws.com/cars-project-repo",
+      "cpu": 0,
+      "portMappings": [
         {
-            "name": "cars-container",
-            "image": "530743905194.dkr.ecr.us-east-2.amazonaws.com/cars-project-repo",
-            "cpu": 0,
-            "portMappings": [
-                {
-                    "containerPort": 80,
-                    "hostPort": 80,
-                    "protocol": "tcp",
-                    "name": "cars-container-80-tcp",
-                    "appProtocol": "http"
-                }
-            ],
-            "essential": true,
-            "environment": [],
-            "environmentFiles": [],
-            "mountPoints": [],
-            "volumesFrom": [],
-            "ulimits": [],
-            "logConfiguration": {
-                "logDriver": "awslogs",
-                "options": {
-                    "awslogs-group": "/ecs/cars-task-def",
-                    "mode": "non-blocking",
-                    "awslogs-create-group": "true",
-                    "max-buffer-size": "25m",
-                    "awslogs-region": "us-east-2",
-                    "awslogs-stream-prefix": "ecs"
-                },
-                "secretOptions": []
-            },
-            "systemControls": []
+          "containerPort": 80,
+          "hostPort": 80,
+          "protocol": "tcp",
+          "name": "cars-container-80-tcp",
+          "appProtocol": "http"
         }
-    ],
-    "family": "cars-task-def",
-    "executionRoleArn": "arn:aws:iam::530743905194:role/ecsTaskExecutionRole",
-    "networkMode": "awsvpc",
-    "revision": 1,
-    "volumes": [],
-    "status": "ACTIVE",
-    "requiresAttributes": [
-        {
-            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+      ],
+      "essential": true,
+      "environment": [],
+      "environmentFiles": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "ulimits": [],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/cars-task-def",
+          "mode": "non-blocking",
+          "awslogs-create-group": "true",
+          "max-buffer-size": "25m",
+          "awslogs-region": "us-east-2",
+          "awslogs-stream-prefix": "ecs"
         },
-        {
-            "name": "ecs.capability.execution-role-awslogs"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.ecr-auth"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.28"
-        },
-        {
-            "name": "ecs.capability.execution-role-ecr-pull"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-        },
-        {
-            "name": "ecs.capability.task-eni"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
-        }
-    ],
-    "placementConstraints": [],
-    "compatibilities": [
-        "EC2",
-        "FARGATE"
-    ],
-    "runtimePlatform": {
-        "cpuArchitecture": "X86_64",
-        "operatingSystemFamily": "LINUX"
-    },
-    "requiresCompatibilities": [
-        "FARGATE"
-    ],
-    "cpu": "1024",
-    "memory": "2048",
-    "registeredAt": "2025-05-20T17:34:56.315000-05:00",
-    "registeredBy": "arn:aws:iam::530743905194:root",
-    "enableFaultInjection": false
+        "secretOptions": []
+      },
+      "systemControls": []
+    }
+  ],
+  "volumes": [],
+  "placementConstraints": [],
+  "requiresCompatibilities": [
+    "FARGATE"
+  ],
+  "cpu": "1024",
+  "memory": "2048",
+  "runtimePlatform": {
+    "cpuArchitecture": "X86_64",
+    "operatingSystemFamily": "LINUX"
+  }
 }
