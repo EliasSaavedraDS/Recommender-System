@@ -31,9 +31,9 @@ This has been one of the most challenging and rewarding projects I've worked on.
 
 ## ✅ Proof of Deployment
 
-Below is a screenshot showing the API live on AWS using its public IP:
+Below are screenshots showing the API live on AWS using its public IP:
 
-![Deployed API Screenshot](screenshots/Screenshot(23).png)
+![Deployed API Screenshot](screenshots\Screenshot(23).png)
 
 ![Deployed API Screenshot](screenshots/Screenshot(24).png)
 
